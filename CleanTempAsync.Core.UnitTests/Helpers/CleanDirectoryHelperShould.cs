@@ -8,7 +8,7 @@ using FakeItEasy;
 using FluentAssertions;
 using Xunit.Abstractions;
 
-namespace CleanTempAsync.Core.UnitTests.Helpers.GetTempFolderPathHelperTests;
+namespace CleanTempAsync.Core.UnitTests.Helpers;
 
 public class CleanDirectoryHelperShould
 {
@@ -80,7 +80,6 @@ public class CleanDirectoryHelperShould
 
         A.CallTo(() => getTempFolderPathHelper.GetTempFolderPath()).Returns(_tempFolderPath);
 
-
         // Act
         Action act = () => sut.CleanDirectory();
 
@@ -88,6 +87,7 @@ public class CleanDirectoryHelperShould
         act.Should().NotThrow(); // 确保没有抛出异常
         // 目录仍然存在，因为文件未被删除
         Directory.Exists(_tempFolderPath).Should().BeTrue();
+        Dispose();
     }
 
     [Theory]
@@ -119,7 +119,9 @@ public class CleanDirectoryHelperShould
         act.Should().NotThrow(); // 确保没有抛出异常
         // 目录仍然存在，因为可能发生了 IO 异常
         Directory.Exists(_tempFolderPath).Should().BeTrue();
+        Dispose();
     }
+
 
     [Fact]
     public void Dispose()

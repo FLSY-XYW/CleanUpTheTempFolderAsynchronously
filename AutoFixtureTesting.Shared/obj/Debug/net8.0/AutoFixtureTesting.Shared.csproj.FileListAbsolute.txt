@@ -10,3 +10,4 @@ E:\PersonalCSharpProject\CleanUpTheTempFolderAsynchronously\AutoFixtureTesting.S
 E:\PersonalCSharpProject\CleanUpTheTempFolderAsynchronously\AutoFixtureTesting.Shared\obj\Debug\net8.0\refint\AutoFixtureTesting.Shared.dll
 E:\PersonalCSharpProject\CleanUpTheTempFolderAsynchronously\AutoFixtureTesting.Shared\obj\Debug\net8.0\AutoFixtureTesting.Shared.pdb
 E:\PersonalCSharpProject\CleanUpTheTempFolderAsynchronously\AutoFixtureTesting.Shared\obj\Debug\net8.0\ref\AutoFixtureTesting.Shared.dll
+E:\PersonalCSharpProject\CleanUpTheTempFolderAsynchronously\AutoFixtureTesting.Shared\obj\Debug\net8.0\AutoFixtureTesting.Shared.sourcelink.json

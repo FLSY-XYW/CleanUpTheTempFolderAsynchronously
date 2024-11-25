@@ -9,3 +9,4 @@ E:\PersonalCSharpProject\CleanUpTheTempFolderAsynchronously\CleanTempAsync.Core\
 E:\PersonalCSharpProject\CleanUpTheTempFolderAsynchronously\CleanTempAsync.Core\obj\Debug\net8.0\refint\CleanTempAsync.Core.dll
 E:\PersonalCSharpProject\CleanUpTheTempFolderAsynchronously\CleanTempAsync.Core\obj\Debug\net8.0\CleanTempAsync.Core.pdb
 E:\PersonalCSharpProject\CleanUpTheTempFolderAsynchronously\CleanTempAsync.Core\obj\Debug\net8.0\ref\CleanTempAsync.Core.dll
+E:\PersonalCSharpProject\CleanUpTheTempFolderAsynchronously\CleanTempAsync.Core\obj\Debug\net8.0\CleanTempAsync.Core.sourcelink.json

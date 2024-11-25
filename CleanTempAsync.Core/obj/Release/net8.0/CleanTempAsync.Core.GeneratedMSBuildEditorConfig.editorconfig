@@ -1,7 +1,7 @@
 is_global = true
 build_property.EnableAotAnalyzer = 
 build_property.EnableSingleFileAnalyzer = true
-build_property.EnableTrimAnalyzer = 
+build_property.EnableTrimAnalyzer = true
 build_property.IncludeAllContentForSelfExtract = false
 build_property.TargetFramework = net8.0
 build_property.TargetPlatformMinVersion = 
@@ -14,4 +14,4 @@ build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = CleanTempAsync.Core
 build_property.ProjectDir = E:\PersonalCSharpProject\CleanUpTheTempFolderAsynchronously\CleanTempAsync.Core\
 build_property.EnableComHosting = 
-build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.EnableGeneratedComInterfaceComImportInterop = false
