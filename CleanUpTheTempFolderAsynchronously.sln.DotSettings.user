@@ -21,12 +21,20 @@
 	<s:String x:Key="/Default/CodeInspection/ExcludedFiles/FilesAndFoldersToSkip2/=7020124F_002D9FFC_002D4AC3_002D8F3D_002DAAB8E0240759_002Ff_003ATask_002Ecs_002Fl_003AC_0021_003FUsers_003FKamenRider_003FAppData_003FRoaming_003FJetBrains_003FRider2024_002E2_003Fresharper_002Dhost_003FSourcesCache_003F2e49d132ea68ff47071c64476ae29138fa965dc555ef7c3f4991586431de241_003FTask_002Ecs/@EntryIndexedValue">ForceIncluded</s:String>
 	<s:String x:Key="/Default/CodeInspection/ExcludedFiles/FilesAndFoldersToSkip2/=7020124F_002D9FFC_002D4AC3_002D8F3D_002DAAB8E0240759_002Ff_003ATestInvoker_002Ecs_002Fl_003AC_0021_003FUsers_003FKamenRider_003FAppData_003FRoaming_003FJetBrains_003FRider2024_002E2_003Fresharper_002Dhost_003FSourcesCache_003Fc3ec25c53b94f51fa21da479c513e551efee2b5ae49a79934686d2bb714d46_003FTestInvoker_002Ecs/@EntryIndexedValue">ForceIncluded</s:String>
 	<s:String x:Key="/Default/CodeInspection/ExcludedFiles/FilesAndFoldersToSkip2/=7020124F_002D9FFC_002D4AC3_002D8F3D_002DAAB8E0240759_002Ff_003AXUnit2TestFramework_002Ecs_002Fl_003AC_0021_003FUsers_003FKamenRider_003FAppData_003FRoaming_003FJetBrains_003FRider2024_002E2_003Fresharper_002Dhost_003FSourcesCache_003Fc62dbcc4ba2718769223d2edcbb462defa1d97c8f2ef066639d41ddd521e_003FXUnit2TestFramework_002Ecs/@EntryIndexedValue">ForceIncluded</s:String>
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=1adbe162_002D6fa5_002D48ec_002D9c03_002D390282baf611/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="Return_TempFolder_Path" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=1adbe162_002D6fa5_002D48ec_002D9c03_002D390282baf611/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="Return_TempFolder_Path" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
   &lt;TestAncestor&gt;&#xD;
     &lt;TestId&gt;xUnit::88BA668C-72A3-49BC-815C-63F4750A22A3::net8.0::CleanTempAsync.Core.UnitTests.Helpers.GetTempFolderPathHelperTests.GetTempFolderPathHelperShould&lt;/TestId&gt;&#xD;
     &lt;TestId&gt;xUnit::88BA668C-72A3-49BC-815C-63F4750A22A3::net8.0::CleanTempAsync.Core.UnitTests.Helpers.GetTempFolderPathHelperTests.CleanDirectoryHelperShould.Given_TempFolderPath_And_Clean_The_Directory&lt;/TestId&gt;&#xD;
     &lt;TestId&gt;xUnit::88BA668C-72A3-49BC-815C-63F4750A22A3::net8.0::CleanTempAsync.Core.UnitTests.Helpers.GetTempFolderPathHelperTests.CleanDirectoryHelperShould&lt;/TestId&gt;&#xD;
     &lt;TestId&gt;xUnit::88BA668C-72A3-49BC-815C-63F4750A22A3::net8.0::CleanTempAsync.Core.UnitTests.Helpers.CleanDirectoryHelperShould&lt;/TestId&gt;&#xD;
     &lt;TestId&gt;xUnit::88BA668C-72A3-49BC-815C-63F4750A22A3::net8.0::CleanTempAsync.Core.UnitTests.Helpers.CleanDirectoryHelperShouldAsync&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=44d2f2da_002D9254_002D4dc4_002D956a_002D9379a7bb35ec/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="CleanDirectoryHelperShould" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;xUnit::88BA668C-72A3-49BC-815C-63F4750A22A3::net8.0::CleanTempAsync.Core.UnitTests.Helpers.CleanDirectoryHelperShould&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::88BA668C-72A3-49BC-815C-63F4750A22A3::net8.0::CleanTempAsync.Core.UnitTests.Helpers.CleanDirectoryHelperShouldAsync.CleanDirectory_ShouldHandleUnauthorizedAccessException_WhenDeletingFiles_Asynchronously&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::88BA668C-72A3-49BC-815C-63F4750A22A3::net8.0::CleanTempAsync.Core.UnitTests.Helpers.CleanDirectoryHelperShouldAsync&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::88BA668C-72A3-49BC-815C-63F4750A22A3::net8.0::CleanTempAsync.Core.UnitTests.Helpers.GetTempFolderPathHelperTests.GetTempFolderPathHelperShould&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>

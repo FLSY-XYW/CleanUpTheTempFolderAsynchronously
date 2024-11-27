@@ -227,6 +227,8 @@ public class CleanDirectoryHelper
                 ? directories.Select(subDir => TryDeleteDirectoryAsync(subDir))
                 : Enumerable.Empty<Task>();
 
+            await Task.WhenAll(subDirTasks);
+
             // 创建删除文件的任务，仅当文件不为空时
             var fileTasks = files.Length > 0
                 ? files.Select(file => TryDeleteFileAsync(file))
@@ -234,7 +236,7 @@ public class CleanDirectoryHelper
 
             // 同时删除文件和子目录
             await Task.WhenAll(fileTasks);
-            await Task.WhenAll(subDirTasks);
+
 
             dir.Delete(true);
 
