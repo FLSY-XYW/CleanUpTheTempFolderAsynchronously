@@ -1,0 +1,51 @@
+# This workflow will build a .NET project and run Stryker mutation tests
+# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-net
+
+name: .NET Build and Stryker Tests
+
+on:
+  push:
+    branches: [ "master" ]  # 当master分支有push操作时触发工作流
+  pull_request:
+    branches: [ "master" ]  # 当master分支有拉取请求时触发工作流
+
+jobs:
+  build-and-test-ubuntu:
+    runs-on: ubuntu-latest  # 指定运行环境为最新的Ubuntu
+
+    steps:
+    - uses: actions/checkout@v4  # 检出代码到运行环境
+    - name: Setup .NET  # 设置.NET环境
+      uses: actions/setup-dotnet@v4  # 使用actions/setup-dotnet行动来设置.NET版本
+      with:
+        dotnet-version: 8.0.x  # 指定.NET版本为8.0.x
+    - name: Install Stryker globally  # 全局安装Stryker
+      run: dotnet tool install -g dotnet-stryker  # 使用dotnet CLI全局安装Stryker工具
+    - name: Restore dependencies  # 恢复项目依赖
+      run: dotnet restore  # 使用dotnet CLI恢复依赖
+    - name: Build  # 构建项目
+      run: dotnet build --no-restore  # 使用dotnet CLI构建项目，不自动恢复依赖
+    - name: Test  # 测试项目
+      run: dotnet test --no-build --verbosity normal  # 使用dotnet CLI测试项目，不自动构建，设置日志级别为normal
+    - name: Run Stryker Mutation Tests  # 运行Stryker变异测试
+      run: dotnet stryker --config-file=CleanTempAsync.Core.UnitTests/stryker-config.json  # 使用dotnet CLI运行Stryker，指定配置文件
+
+  build-and-test-windows:
+    runs-on: windows-latest  # 指定运行环境为最新的Windows
+
+    steps:
+    - uses: actions/checkout@v4  # 检出代码到运行环境
+    - name: Setup .NET  # 设置.NET环境
+      uses: actions/setup-dotnet@v4  # 使用actions/setup-dotnet行动来设置.NET版本
+      with:
+        dotnet-version: 8.0.x  # 指定.NET版本为8.0.x
+    - name: Install Stryker globally  # 全局安装Stryker
+      run: dotnet tool install -g dotnet-stryker  # 使用dotnet CLI全局安装Stryker工具
+    - name: Restore dependencies  # 恢复项目依赖
+      run: dotnet restore  # 使用dotnet CLI恢复依赖
+    - name: Build  # 构建项目
+      run: dotnet build --no-restore  # 使用dotnet CLI构建项目，不自动恢复依赖
+    - name: Test  # 测试项目
+      run: dotnet test --no-build --verbosity normal  # 使用dotnet CLI测试项目，不自动构建，设置日志级别为normal
+    - name: Run Stryker Mutation Tests  # 运行Stryker变异测试
+      run: dotnet stryker --config-file=CleanTempAsync.Core.UnitTests/stryker-config.json  # 使用dotnet CLI运行Stryker，指定配置文件
