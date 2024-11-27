@@ -10,12 +10,12 @@ namespace CleanTempAsync.Core.UnitTests.Helpers;
 public class CleanDirectoryHelperShouldAsync
 {
     private readonly ITestOutputHelper _testOutputHelper;
-    private readonly string _tempFolderPath;
+    // private readonly string _tempFolderPath;
 
     public CleanDirectoryHelperShouldAsync(ITestOutputHelper testOutputHelper)
     {
         _testOutputHelper = testOutputHelper;
-        this._tempFolderPath = Path.Combine(Path.GetTempPath(), "TestTempFolder");
+        // this._tempFolderPath = Path.Combine(Path.GetTempPath(), "TestTempFolder");
     }
 
     [Theory]
@@ -28,6 +28,8 @@ public class CleanDirectoryHelperShouldAsync
         // Arrange
 
         #region Create temporary directories and files for testing/创建测试临时目录和文件
+
+        string _tempFolderPath = Path.Combine(Path.GetTempPath(), "TestTempFolder");
 
         Directory.CreateDirectory(_tempFolderPath);
         File.Create(Path.Combine(_tempFolderPath, "file1.txt")).Dispose();
@@ -64,7 +66,7 @@ public class CleanDirectoryHelperShouldAsync
         // Arrange
 
         #region Create temporary directories and files for testing/创建测试临时目录和文件
-
+        string _tempFolderPath = Path.Combine(Path.GetTempPath(), "TestTempFolder");
         // 创建测试临时目录和文件
         Directory.CreateDirectory(_tempFolderPath);
         var filePath = Path.Combine(_tempFolderPath, "file1.txt");
@@ -97,7 +99,7 @@ public class CleanDirectoryHelperShouldAsync
         // Arrange
 
         #region Create temporary directories and files for testing/创建测试临时目录和文件
-
+        string _tempFolderPath = Path.Combine(Path.GetTempPath(), "TestTempFolder");
         // 创建测试临时目录和文件
         Directory.CreateDirectory(_tempFolderPath);
         var subDirPath = Path.Combine(_tempFolderPath, "SubDir");
@@ -154,8 +156,7 @@ public class CleanDirectoryHelperShouldAsync
         Dispose();
     }
 
-    [Fact]
-    public void Dispose()
+    private void Dispose()
     {
         string tempFolderPath = Path.Combine(Path.GetTempPath(), "TestTempFolder");
 
