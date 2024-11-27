@@ -11,9 +11,7 @@ public class CleanDirectoryHelper
         this._getTempFolderPathHelper = getTempFolderPathHelper;
     }
 
-    #region 同步方法代码
-
-    public void CleanDirectory()
+    private bool GetDirectory(out DirectoryInfo? di)
     {
         string directoryPath = _getTempFolderPathHelper.GetTempFolderPath();
 
@@ -22,8 +20,62 @@ public class CleanDirectoryHelper
             throw new ArgumentException("Directory path is empty");
         }
 
-        DirectoryInfo di = new DirectoryInfo(directoryPath);
+        if (!Directory.Exists(directoryPath))
+        {
+            throw new DirectoryNotFoundException("Directory path does not exist");
+        }
 
+        di = new DirectoryInfo(directoryPath);
+        try
+        {
+            if (!di.Exists)
+            {
+                Console.WriteLine("Directory does not exist.");
+            }
+        }
+        catch (ArgumentException ex)
+        {
+            // 路径格式不正确
+            Console.WriteLine("ArgumentException: " + ex.Message);
+            di = null;
+        }
+        catch (PathTooLongException ex)
+        {
+            // 路径太长
+            Console.WriteLine("PathTooLongException: " + ex.Message);
+            di = null;
+        }
+        catch (UnauthorizedAccessException ex)
+        {
+            // 没有权限访问路径
+            Console.WriteLine("UnauthorizedAccessException: " + ex.Message);
+            di = null;
+        }
+        // catch (DirectoryNotFoundException ex)
+        // {
+        //     // 路径不存在
+        //     Console.WriteLine("DirectoryNotFoundException: " + ex.Message);
+        // }
+        catch (Exception ex)
+        {
+            // 其他类型的异常
+            Console.WriteLine("An unexpected exception occurred: " + ex.Message);
+            di = null;
+        }
+
+        return di != null;
+    }
+
+    #region 同步方法代码
+
+    public void CleanDirectory()
+    {
+        if (!GetDirectory(out var di)) return;
+
+        if (di == null)
+        {
+            return;
+        }
 
         FileInfo[] fileInfos = di.GetFiles("*.*");
         foreach (var file in fileInfos)
@@ -120,34 +172,23 @@ public class CleanDirectoryHelper
 
     public async Task CleanDirectoryAsync()
     {
-        string directoryPath = _getTempFolderPathHelper.GetTempFolderPath();
+        if (!GetDirectory(out var di)) return;
 
-        if (string.IsNullOrWhiteSpace(directoryPath))
+        if (di == null)
         {
-            throw new ArgumentException("Directory path is empty");
+            return;
         }
 
-        DirectoryInfo di = new DirectoryInfo(directoryPath);
+        FileInfo[] fileInfos = di.GetFiles("*.*");
+        DirectoryInfo[] directoryInfos = di.GetDirectories("*.*");
 
-        // var tasks = new List<Task>();
-        // FileInfo[] fileInfos = di.GetFiles("*.*");
-        // foreach (var file in fileInfos)
-        // {
-        //     tasks.Add(TryDeleteFileAsync(file));
-        // }
-        //
-        // DirectoryInfo[] directoryInfos = di.GetDirectories("*.*");
-        //
-        // foreach (DirectoryInfo? directoryInfo in directoryInfos)
-        // {
-        //     tasks.Add(TryDeleteDirectoryAsync(directoryInfo));
-        // }
-        //
-        // await Task.WhenAll(tasks);
+        var tasksFile = fileInfos.Length > 0
+            ? fileInfos.Select(file => TryDeleteFileAsync(file))
+            : Enumerable.Empty<Task>();
 
-        var tasksFile = di.GetFiles("*.*").Select(file => TryDeleteFileAsync(file));
-        var tasksDirectoryInfo =
-            di.GetDirectories("*.*").Select(directoryInfo => TryDeleteDirectoryAsync(directoryInfo));
+        var tasksDirectoryInfo = directoryInfos.Length > 0
+            ? directoryInfos.Select(directoryInfo => TryDeleteDirectoryAsync(directoryInfo))
+            : Enumerable.Empty<Task>();
 
         await Task.WhenAll(tasksFile.Concat(tasksDirectoryInfo));
 
@@ -178,22 +219,6 @@ public class CleanDirectoryHelper
     {
         try
         {
-            // Task tryDeleteDirectoryAsync = Task.CompletedTask;
-            // // 递归删除子目录
-            // if (dir.GetDirectories().Length > 0)
-            // {
-            //     foreach (DirectoryInfo subDir in dir.GetDirectories())
-            //     {
-            //         tryDeleteDirectoryAsync = TryDeleteDirectoryAsync(subDir);
-            //     }
-            // }
-            //
-            // // 删除目录中的文件
-            // await Task.WhenAll(dir.GetFiles().Select(file => TryDeleteFileAsync(file)));
-            // await tryDeleteDirectoryAsync;
-            // // 删除目录
-            // dir.Delete(true);
-
             DirectoryInfo[] directories = dir.GetDirectories();
             FileInfo[] files = dir.GetFiles();
 

@@ -119,6 +119,41 @@ public class CleanDirectoryHelperShouldAsync
         Dispose();
     }
 
+    [Theory]
+    [AutoFakeItEasy]
+    public async Task CleanDirectory_ShouldHandleArgumentException_WhenGetTempFolderPathReturnNull_Asynchronously(
+        [Frozen] IGetTempFolderPathHelper getTempFolderPathHelper,
+        CleanDirectoryHelper sut
+    )
+    {
+        // Arrange
+        A.CallTo(() => getTempFolderPathHelper.GetTempFolderPath()).Returns(string.Empty);
+        // Act
+        Func<Task> act = async () => await sut.CleanDirectoryAsync();
+
+        // Assert
+        await act.Should().ThrowAsync<ArgumentException>().WithMessage("Directory path is empty");
+    }
+
+    [Theory]
+    [AutoFakeItEasy]
+    public async Task
+        CleanDirectory_ShouldHandleArgumentException_WhenGetTempFolderPathReturnNotExistPath_Asynchronously(
+            [Frozen] IGetTempFolderPathHelper getTempFolderPathHelper,
+            CleanDirectoryHelper sut,
+            string fakeTempFolderPath
+        )
+    {
+        // Arrange
+        A.CallTo(() => getTempFolderPathHelper.GetTempFolderPath()).Returns(fakeTempFolderPath);
+        // Act
+        Func<Task> act = async () => await sut.CleanDirectoryAsync();
+
+        // Assert
+        await act.Should().ThrowAsync<DirectoryNotFoundException>().WithMessage("Directory path does not exist");
+        Dispose();
+    }
+
     [Fact]
     public void Dispose()
     {

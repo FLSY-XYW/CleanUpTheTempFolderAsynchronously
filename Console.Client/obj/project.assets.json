@@ -130,7 +130,7 @@
     "version": "1.0.0",
     "restore": {
       "projectUniqueName": "E:\\PersonalCSharpProject\\CleanUpTheTempFolderAsynchronously\\Console.Client\\Console.Client.csproj",
-      "projectName": "CleanTemp",
+      "projectName": "CleanTempAsync",
       "projectPath": "E:\\PersonalCSharpProject\\CleanUpTheTempFolderAsynchronously\\Console.Client\\Console.Client.csproj",
       "packagesPath": "C:\\Users\\KamenRider\\.nuget\\packages\\",
       "outputPath": "E:\\PersonalCSharpProject\\CleanUpTheTempFolderAsynchronously\\Console.Client\\obj\\",

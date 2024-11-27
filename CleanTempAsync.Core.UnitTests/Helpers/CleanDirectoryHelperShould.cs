@@ -122,6 +122,40 @@ public class CleanDirectoryHelperShould
         Dispose();
     }
 
+    [Theory]
+    [AutoFakeItEasy]
+    public void CleanDirectory_ShouldHandleArgumentException_WhenGetTempFolderPathReturnNull(
+        [Frozen] IGetTempFolderPathHelper getTempFolderPathHelper,
+        CleanDirectoryHelper sut
+    )
+    {
+        // Arrange
+        A.CallTo(() => getTempFolderPathHelper.GetTempFolderPath()).Returns(string.Empty);
+        // Act
+        Action act = () => sut.CleanDirectory();
+
+        // Assert
+        act.Should().Throw<ArgumentException>().WithMessage("Directory path is empty");
+    }
+
+
+    [Theory]
+    [AutoFakeItEasy]
+    public void CleanDirectory_ShouldHandleArgumentException_WhenGetTempFolderPathReturnNotExistPath(
+        [Frozen] IGetTempFolderPathHelper getTempFolderPathHelper,
+        CleanDirectoryHelper sut,
+        string fakeTempFolderPath
+    )
+    {
+        // Arrange
+        A.CallTo(() => getTempFolderPathHelper.GetTempFolderPath()).Returns(fakeTempFolderPath);
+        // Act
+        Action act = () => sut.CleanDirectory();
+
+        // Assert
+        act.Should().Throw<DirectoryNotFoundException>().WithMessage("Directory path does not exist");
+        Dispose();
+    }
 
     [Fact]
     public void Dispose()

@@ -51,6 +51,27 @@ public class GetTempFolderPathHelperShould
         // Assert
         // act.Should().Throw<GetTempFolderPathHelperException>()
         //     .WithMessage("Could not get temp folder path");
-        actualResult.Should().Throw<GetTempFolderPathHelperException>();
+        actualResult.Should().Throw<GetTempFolderPathHelperException>()
+            .WithMessage("Could not get temp folder path");
+    }
+
+    [Theory]
+    [AutoFakeItEasy]
+    public void GetTempFolderPath_ShouldThrowException_WhenDirectoryNameIsNotExists(
+        [Frozen] ITempFolderPathProvider tempFolderPathProvider,
+        GetTempFolderPathHelper sut,
+        string fakeTempFolderPath
+    )
+    {
+        // Arrange
+        A.CallTo(() => tempFolderPathProvider.TempFolderPathProvider()).Returns(fakeTempFolderPath);
+        // Act
+        Action actualResult = () => sut.GetTempFolderPath();
+
+        // Assert
+        // act.Should().Throw<GetTempFolderPathHelperException>()
+        //     .WithMessage("Could not get temp folder path");
+        actualResult.Should().Throw<GetTempFolderPathHelperException>()
+            .WithMessage("The temp folder path does not exist");
     }
 }

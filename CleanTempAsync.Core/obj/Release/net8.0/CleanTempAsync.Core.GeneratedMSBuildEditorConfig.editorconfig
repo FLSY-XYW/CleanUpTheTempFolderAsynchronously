@@ -15,3 +15,5 @@ build_property.RootNamespace = CleanTempAsync.Core
 build_property.ProjectDir = E:\PersonalCSharpProject\CleanUpTheTempFolderAsynchronously\CleanTempAsync.Core\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = false
+build_property.EffectiveAnalysisLevelStyle = 8.0
+build_property.EnableCodeStyleSeverity = 
