@@ -1,0 +1,13 @@
+E:\PersonalCSharpProject\CleanUpTheTempFolderAsynchronously\NLog.Shared\bin\Debug\net8.0\NLog.Shared.deps.json
+E:\PersonalCSharpProject\CleanUpTheTempFolderAsynchronously\NLog.Shared\bin\Debug\net8.0\NLog.Shared.dll
+E:\PersonalCSharpProject\CleanUpTheTempFolderAsynchronously\NLog.Shared\bin\Debug\net8.0\NLog.Shared.pdb
+E:\PersonalCSharpProject\CleanUpTheTempFolderAsynchronously\NLog.Shared\obj\Debug\net8.0\NLog.Shared.csproj.AssemblyReference.cache
+E:\PersonalCSharpProject\CleanUpTheTempFolderAsynchronously\NLog.Shared\obj\Debug\net8.0\NLog.Shared.GeneratedMSBuildEditorConfig.editorconfig
+E:\PersonalCSharpProject\CleanUpTheTempFolderAsynchronously\NLog.Shared\obj\Debug\net8.0\NLog.Shared.AssemblyInfoInputs.cache
+E:\PersonalCSharpProject\CleanUpTheTempFolderAsynchronously\NLog.Shared\obj\Debug\net8.0\NLog.Shared.AssemblyInfo.cs
+E:\PersonalCSharpProject\CleanUpTheTempFolderAsynchronously\NLog.Shared\obj\Debug\net8.0\NLog.Shared.csproj.CoreCompileInputs.cache
+E:\PersonalCSharpProject\CleanUpTheTempFolderAsynchronously\NLog.Shared\obj\Debug\net8.0\NLog.Shared.sourcelink.json
+E:\PersonalCSharpProject\CleanUpTheTempFolderAsynchronously\NLog.Shared\obj\Debug\net8.0\NLog.Shared.dll
+E:\PersonalCSharpProject\CleanUpTheTempFolderAsynchronously\NLog.Shared\obj\Debug\net8.0\refint\NLog.Shared.dll
+E:\PersonalCSharpProject\CleanUpTheTempFolderAsynchronously\NLog.Shared\obj\Debug\net8.0\NLog.Shared.pdb
+E:\PersonalCSharpProject\CleanUpTheTempFolderAsynchronously\NLog.Shared\obj\Debug\net8.0\ref\NLog.Shared.dll
