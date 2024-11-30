@@ -21,6 +21,13 @@ E:\PersonalCSharpProject\CleanUpTheTempFolderAsynchronously\CleanTempAsync.Core.
 E:\PersonalCSharpProject\CleanUpTheTempFolderAsynchronously\CleanTempAsync.Core.UnitTests\bin\Debug\net8.0\Fare.dll
 E:\PersonalCSharpProject\CleanUpTheTempFolderAsynchronously\CleanTempAsync.Core.UnitTests\bin\Debug\net8.0\FluentAssertions.dll
 E:\PersonalCSharpProject\CleanUpTheTempFolderAsynchronously\CleanTempAsync.Core.UnitTests\bin\Debug\net8.0\Microsoft.VisualStudio.CodeCoverage.Shim.dll
+E:\PersonalCSharpProject\CleanUpTheTempFolderAsynchronously\CleanTempAsync.Core.UnitTests\bin\Debug\net8.0\Microsoft.Extensions.Configuration.Abstractions.dll
+E:\PersonalCSharpProject\CleanUpTheTempFolderAsynchronously\CleanTempAsync.Core.UnitTests\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.dll
+E:\PersonalCSharpProject\CleanUpTheTempFolderAsynchronously\CleanTempAsync.Core.UnitTests\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+E:\PersonalCSharpProject\CleanUpTheTempFolderAsynchronously\CleanTempAsync.Core.UnitTests\bin\Debug\net8.0\Microsoft.Extensions.Logging.dll
+E:\PersonalCSharpProject\CleanUpTheTempFolderAsynchronously\CleanTempAsync.Core.UnitTests\bin\Debug\net8.0\Microsoft.Extensions.Logging.Abstractions.dll
+E:\PersonalCSharpProject\CleanUpTheTempFolderAsynchronously\CleanTempAsync.Core.UnitTests\bin\Debug\net8.0\Microsoft.Extensions.Options.dll
+E:\PersonalCSharpProject\CleanUpTheTempFolderAsynchronously\CleanTempAsync.Core.UnitTests\bin\Debug\net8.0\Microsoft.Extensions.Primitives.dll
 E:\PersonalCSharpProject\CleanUpTheTempFolderAsynchronously\CleanTempAsync.Core.UnitTests\bin\Debug\net8.0\Microsoft.TestPlatform.CoreUtilities.dll
 E:\PersonalCSharpProject\CleanUpTheTempFolderAsynchronously\CleanTempAsync.Core.UnitTests\bin\Debug\net8.0\Microsoft.TestPlatform.PlatformAbstractions.dll
 E:\PersonalCSharpProject\CleanUpTheTempFolderAsynchronously\CleanTempAsync.Core.UnitTests\bin\Debug\net8.0\Microsoft.VisualStudio.TestPlatform.ObjectModel.dll
@@ -29,8 +36,11 @@ E:\PersonalCSharpProject\CleanUpTheTempFolderAsynchronously\CleanTempAsync.Core.
 E:\PersonalCSharpProject\CleanUpTheTempFolderAsynchronously\CleanTempAsync.Core.UnitTests\bin\Debug\net8.0\Microsoft.TestPlatform.Utilities.dll
 E:\PersonalCSharpProject\CleanUpTheTempFolderAsynchronously\CleanTempAsync.Core.UnitTests\bin\Debug\net8.0\Microsoft.VisualStudio.TestPlatform.Common.dll
 E:\PersonalCSharpProject\CleanUpTheTempFolderAsynchronously\CleanTempAsync.Core.UnitTests\bin\Debug\net8.0\Newtonsoft.Json.dll
+E:\PersonalCSharpProject\CleanUpTheTempFolderAsynchronously\CleanTempAsync.Core.UnitTests\bin\Debug\net8.0\NLog.dll
+E:\PersonalCSharpProject\CleanUpTheTempFolderAsynchronously\CleanTempAsync.Core.UnitTests\bin\Debug\net8.0\NLog.Extensions.Logging.dll
 E:\PersonalCSharpProject\CleanUpTheTempFolderAsynchronously\CleanTempAsync.Core.UnitTests\bin\Debug\net8.0\NuGet.Frameworks.dll
 E:\PersonalCSharpProject\CleanUpTheTempFolderAsynchronously\CleanTempAsync.Core.UnitTests\bin\Debug\net8.0\System.Configuration.ConfigurationManager.dll
+E:\PersonalCSharpProject\CleanUpTheTempFolderAsynchronously\CleanTempAsync.Core.UnitTests\bin\Debug\net8.0\System.Diagnostics.DiagnosticSource.dll
 E:\PersonalCSharpProject\CleanUpTheTempFolderAsynchronously\CleanTempAsync.Core.UnitTests\bin\Debug\net8.0\System.Security.Cryptography.ProtectedData.dll
 E:\PersonalCSharpProject\CleanUpTheTempFolderAsynchronously\CleanTempAsync.Core.UnitTests\bin\Debug\net8.0\xunit.abstractions.dll
 E:\PersonalCSharpProject\CleanUpTheTempFolderAsynchronously\CleanTempAsync.Core.UnitTests\bin\Debug\net8.0\xunit.assert.dll
@@ -104,8 +114,10 @@ E:\PersonalCSharpProject\CleanUpTheTempFolderAsynchronously\CleanTempAsync.Core.
 E:\PersonalCSharpProject\CleanUpTheTempFolderAsynchronously\CleanTempAsync.Core.UnitTests\bin\Debug\net8.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
 E:\PersonalCSharpProject\CleanUpTheTempFolderAsynchronously\CleanTempAsync.Core.UnitTests\bin\Debug\net8.0\AutoFixtureTesting.Shared.dll
 E:\PersonalCSharpProject\CleanUpTheTempFolderAsynchronously\CleanTempAsync.Core.UnitTests\bin\Debug\net8.0\CleanTempAsync.Core.dll
+E:\PersonalCSharpProject\CleanUpTheTempFolderAsynchronously\CleanTempAsync.Core.UnitTests\bin\Debug\net8.0\NLog.Shared.dll
 E:\PersonalCSharpProject\CleanUpTheTempFolderAsynchronously\CleanTempAsync.Core.UnitTests\bin\Debug\net8.0\AutoFixtureTesting.Shared.pdb
 E:\PersonalCSharpProject\CleanUpTheTempFolderAsynchronously\CleanTempAsync.Core.UnitTests\bin\Debug\net8.0\CleanTempAsync.Core.pdb
+E:\PersonalCSharpProject\CleanUpTheTempFolderAsynchronously\CleanTempAsync.Core.UnitTests\bin\Debug\net8.0\NLog.Shared.pdb
 E:\PersonalCSharpProject\CleanUpTheTempFolderAsynchronously\CleanTempAsync.Core.UnitTests\obj\Debug\net8.0\CleanTempAsync.Core.UnitTests.csproj.AssemblyReference.cache
 E:\PersonalCSharpProject\CleanUpTheTempFolderAsynchronously\CleanTempAsync.Core.UnitTests\obj\Debug\net8.0\CleanTempAsync.Core.UnitTests.csproj.CoreCompileInputs.cache
 E:\PersonalCSharpProject\CleanUpTheTempFolderAsynchronously\CleanTempAsync.Core.UnitTests\obj\Debug\net8.0\CleanTempAsync.Core.UnitTests.sourcelink.json

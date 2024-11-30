@@ -1,14 +1,18 @@
 ﻿using CleanTempAsync.Core.Helpers.InterfaceLists;
+using NLog.Shared.InterfaceLists;
 
 namespace CleanTempAsync.Core;
 
 public class CleanDirectoryHelper
 {
     private readonly IGetTempFolderPathHelper _getTempFolderPathHelper;
+    private readonly ILoggerService<CleanDirectoryHelper> _logger;
 
-    public CleanDirectoryHelper(IGetTempFolderPathHelper getTempFolderPathHelper)
+    public CleanDirectoryHelper(IGetTempFolderPathHelper getTempFolderPathHelper,
+        ILoggerService<CleanDirectoryHelper> logger)
     {
         this._getTempFolderPathHelper = getTempFolderPathHelper;
+        this._logger = logger;
     }
 
     private bool GetDirectory(out DirectoryInfo? di)
@@ -17,12 +21,14 @@ public class CleanDirectoryHelper
 
         if (string.IsNullOrWhiteSpace(directoryPath))
         {
-            throw new ArgumentException("Directory path is empty");
+            _logger.LogError(new AggregateException(), "Directory path is empty");
+            // throw new ArgumentException("Directory path is empty");
         }
 
         if (!Directory.Exists(directoryPath))
         {
-            throw new DirectoryNotFoundException("Directory path does not exist");
+            _logger.LogError(new DirectoryNotFoundException(), "Directory path does not exist");
+            // throw new DirectoryNotFoundException("Directory path does not exist");
         }
 
         di = new DirectoryInfo(directoryPath);
@@ -30,25 +36,29 @@ public class CleanDirectoryHelper
         {
             if (!di.Exists)
             {
-                Console.WriteLine("Directory does not exist.");
+                _logger.LogError(new AggregateException(), "Directory does not exist.");
+                // Console.WriteLine("Directory does not exist.");
             }
         }
         catch (ArgumentException ex)
         {
             // 路径格式不正确
-            Console.WriteLine("ArgumentException: " + ex.Message);
+            _logger.LogError(ex, "The path format is incorrect");
+            // Console.WriteLine("ArgumentException: " + ex.Message);
             di = null;
         }
         catch (PathTooLongException ex)
         {
             // 路径太长
-            Console.WriteLine("PathTooLongException: " + ex.Message);
+            _logger.LogError(ex, "Path too long");
+            // Console.WriteLine("PathTooLongException: " + ex.Message);
             di = null;
         }
         catch (UnauthorizedAccessException ex)
         {
             // 没有权限访问路径
-            Console.WriteLine("UnauthorizedAccessException: " + ex.Message);
+            _logger.LogError(ex, "No permission to access the path");
+            // Console.WriteLine("UnauthorizedAccessException: " + ex.Message);
             di = null;
         }
         // catch (DirectoryNotFoundException ex)
@@ -58,8 +68,9 @@ public class CleanDirectoryHelper
         // }
         catch (Exception ex)
         {
-            // 其他类型的异常
-            Console.WriteLine("An unexpected exception occurred: " + ex.Message);
+            // 其他类型的异常 | 发生意外异常
+            _logger.LogError(ex, "An unexpected exception occurred");
+            // Console.WriteLine("An unexpected exception occurred: " + ex.Message);
             di = null;
         }
 
@@ -93,18 +104,22 @@ public class CleanDirectoryHelper
         try
         {
             di.Delete();
+            _logger.LogInformation($"Directory {di.FullName} deleted");
         }
         catch (UnauthorizedAccessException ex)
         {
-            Console.WriteLine($"No permission to delete directory: {di.FullName} - {ex.Message}");
+            _logger.LogError(ex, "No permission to delete the directory: {di.FullName} - {ex.Message}");
+            // Console.WriteLine($"No permission to delete directory: {di.FullName} - {ex.Message}");
         }
         catch (IOException ex)
         {
-            Console.WriteLine($"Directory in use or other IO error: {di.FullName} - {ex.Message}");
+            _logger.LogError(ex, "Directory in use or other IO error: {di.FullName} - {ex.Message}");
+            // Console.WriteLine($"Directory in use or other IO error: {di.FullName} - {ex.Message}");
         }
         catch (Exception ex)
         {
-            Console.WriteLine($"Error deleting directory: {di.FullName} - {ex.Message}");
+            _logger.LogError(ex, $"Error deleting directory: {di.FullName} - {ex.Message}");
+            // Console.WriteLine($"Error deleting directory: {di.FullName} - {ex.Message}");
         }
     }
 
@@ -113,19 +128,23 @@ public class CleanDirectoryHelper
         try
         {
             file.Delete();
-            Console.WriteLine($"Deleted file: {file.FullName}");
+            _logger.LogInformation($"Deleted file: {file.FullName}");
+            // Console.WriteLine($"Deleted file: {file.FullName}");
         }
         catch (UnauthorizedAccessException ex)
         {
-            Console.WriteLine($"No permission to delete file: {file.FullName} - {ex.Message}");
+            _logger.LogError(ex, "No permission to delete the file: {file.FullName} - {ex.Message}");
+            // Console.WriteLine($"No permission to delete file: {file.FullName} - {ex.Message}");
         }
         catch (IOException ex)
         {
-            Console.WriteLine($"File in use or other IO error: {file.FullName} - {ex.Message}");
+            _logger.LogError(ex, $"File in use or other IO error: {file.FullName} - {ex.Message}");
+            // Console.WriteLine($"File in use or other IO error: {file.FullName} - {ex.Message}");
         }
         catch (Exception ex)
         {
-            Console.WriteLine($"Error deleting file: {file.FullName} - {ex.Message}");
+            _logger.LogError(ex, $"Error deleting file: {file.FullName} - {ex.Message}");
+            // Console.WriteLine($"Error deleting file: {file.FullName} - {ex.Message}");
         }
     }
 
@@ -150,19 +169,23 @@ public class CleanDirectoryHelper
 
             // 删除目录
             dir.Delete();
-            Console.WriteLine($"Deleted directory: {dir.FullName}");
+            _logger.LogInformation($"Deleted directory: {dir.FullName}");
+            // Console.WriteLine($"Deleted directory: {dir.FullName}");
         }
         catch (UnauthorizedAccessException ex)
         {
-            Console.WriteLine($"No permission to delete directory: {dir.FullName} - {ex.Message}");
+            _logger.LogError(ex, "No permission to delete the directory: {dir.FullName} - {ex.Message}");
+            // Console.WriteLine($"No permission to delete directory: {dir.FullName} - {ex.Message}");
         }
         catch (IOException ex)
         {
-            Console.WriteLine($"Directory in use or other IO error: {dir.FullName} - {ex.Message}");
+            _logger.LogError(ex, $"Directory in use or other IO error: {dir.FullName} - {ex.Message}");
+            // Console.WriteLine($"Directory in use or other IO error: {dir.FullName} - {ex.Message}");
         }
         catch (Exception ex)
         {
-            Console.WriteLine($"Error deleting directory: {dir.FullName} - {ex.Message}");
+            _logger.LogError(ex, $"Error deleting directory: {dir.FullName} - {ex.Message}");
+            // Console.WriteLine($"Error deleting directory: {dir.FullName} - {ex.Message}");
         }
     }
 
@@ -195,18 +218,22 @@ public class CleanDirectoryHelper
         try
         {
             di.Delete();
+            _logger.LogInformation($"Deleted directory: {di.FullName}");
         }
         catch (UnauthorizedAccessException ex)
         {
-            Console.WriteLine($"No permission to delete directory: {di.FullName} - {ex.Message}");
+            _logger.LogError(ex, "No permission to delete the directory: {di.FullName} - {ex.Message}");
+            // Console.WriteLine($"No permission to delete directory: {di.FullName} - {ex.Message}");
         }
         catch (IOException ex)
         {
-            Console.WriteLine($"Directory in use or other IO error: {di.FullName} - {ex.Message}");
+            _logger.LogError(ex, $"Directory in use or other IO error: {di.FullName} - {ex.Message}");
+            // Console.WriteLine($"Directory in use or other IO error: {di.FullName} - {ex.Message}");
         }
         catch (Exception ex)
         {
-            Console.WriteLine($"Error deleting directory: {di.FullName} - {ex.Message}");
+            _logger.LogError(ex, $"Error deleting directory: {di.FullName} - {ex.Message}");
+            // Console.WriteLine($"Error deleting directory: {di.FullName} - {ex.Message}");
         }
     }
 
@@ -242,15 +269,18 @@ public class CleanDirectoryHelper
         }
         catch (UnauthorizedAccessException ex)
         {
-            Console.WriteLine($"No permission to delete directory: {dir.FullName} - {ex.Message}");
+            _logger.LogError(ex, "No permission to delete the directory: {dir.FullName} - {ex.Message}");
+            // Console.WriteLine($"No permission to delete directory: {dir.FullName} - {ex.Message}");
         }
         catch (IOException ex)
         {
-            Console.WriteLine($"Directory in use or other IO error: {dir.FullName} - {ex.Message}");
+            _logger.LogError(ex, $"Directory in use or other IO error: {dir.FullName} - {ex.Message}");
+            // Console.WriteLine($"Directory in use or other IO error: {dir.FullName} - {ex.Message}");
         }
         catch (Exception ex)
         {
-            Console.WriteLine($"Error deleting directory: {dir.FullName} - {ex.Message}");
+            _logger.LogError(ex, $"Error deleting directory: {dir.FullName} - {ex.Message}");
+            // Console.WriteLine($"Error deleting directory: {dir.FullName} - {ex.Message}");
         }
     }
 

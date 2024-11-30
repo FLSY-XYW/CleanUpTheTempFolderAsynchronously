@@ -2,8 +2,12 @@ E:\PersonalCSharpProject\CleanUpTheTempFolderAsynchronously\CleanTempAsync.Core\
 E:\PersonalCSharpProject\CleanUpTheTempFolderAsynchronously\CleanTempAsync.Core\obj\Debug\net8.0\CleanTempAsync.Core.GeneratedMSBuildEditorConfig.editorconfig
 E:\PersonalCSharpProject\CleanUpTheTempFolderAsynchronously\CleanTempAsync.Core\obj\Debug\net8.0\CleanTempAsync.Core.AssemblyInfoInputs.cache
 E:\PersonalCSharpProject\CleanUpTheTempFolderAsynchronously\CleanTempAsync.Core\obj\Debug\net8.0\CleanTempAsync.Core.AssemblyInfo.cs
+E:\PersonalCSharpProject\CleanUpTheTempFolderAsynchronously\CleanTempAsync.Core\obj\Debug\net8.0\CleanTem.38713B67.Up2Date
 E:\PersonalCSharpProject\CleanUpTheTempFolderAsynchronously\CleanTempAsync.Core\bin\Debug\net8.0\CleanTempAsync.Core.dll
 E:\PersonalCSharpProject\CleanUpTheTempFolderAsynchronously\CleanTempAsync.Core\bin\Debug\net8.0\CleanTempAsync.Core.pdb
+E:\PersonalCSharpProject\CleanUpTheTempFolderAsynchronously\CleanTempAsync.Core\bin\Debug\net8.0\NLog.Shared.dll
+E:\PersonalCSharpProject\CleanUpTheTempFolderAsynchronously\CleanTempAsync.Core\bin\Debug\net8.0\NLog.Shared.pdb
+E:\PersonalCSharpProject\CleanUpTheTempFolderAsynchronously\CleanTempAsync.Core\obj\Debug\net8.0\CleanTempAsync.Core.csproj.AssemblyReference.cache
 E:\PersonalCSharpProject\CleanUpTheTempFolderAsynchronously\CleanTempAsync.Core\obj\Debug\net8.0\CleanTempAsync.Core.csproj.CoreCompileInputs.cache
 E:\PersonalCSharpProject\CleanUpTheTempFolderAsynchronously\CleanTempAsync.Core\obj\Debug\net8.0\CleanTempAsync.Core.sourcelink.json
 E:\PersonalCSharpProject\CleanUpTheTempFolderAsynchronously\CleanTempAsync.Core\obj\Debug\net8.0\CleanTempAsync.Core.dll
