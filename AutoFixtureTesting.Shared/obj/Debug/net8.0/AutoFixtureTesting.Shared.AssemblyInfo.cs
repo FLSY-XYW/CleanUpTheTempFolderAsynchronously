@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AutoFixtureTesting.Shared")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b64b8dc73bbd187dc17e5b85fa8613f9ff161c71")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+156390ca7d52b4938eb4bf6130bb261bc8e4370d")]
 [assembly: System.Reflection.AssemblyProductAttribute("AutoFixtureTesting.Shared")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AutoFixtureTesting.Shared")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("NLog.Shared")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b64b8dc73bbd187dc17e5b85fa8613f9ff161c71")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+08193ba5f02f78651a512558aa10b17829c75ba0")]
 [assembly: System.Reflection.AssemblyProductAttribute("NLog.Shared")]
 [assembly: System.Reflection.AssemblyTitleAttribute("NLog.Shared")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
