@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CleanTempAsync.Core.UnitTests")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fbee35e9bccbbf4580e871cb020bd28d2b2ae3d5")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+246c00909a53869ddfbe8a44597a36919c667fa9")]
 [assembly: System.Reflection.AssemblyProductAttribute("CleanTempAsync.Core.UnitTests")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CleanTempAsync.Core.UnitTests")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
