@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CleanTempAsync.Core")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+07d6aaca3f74e7a7269ff65f6026e0daf7ba28fe")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+08193ba5f02f78651a512558aa10b17829c75ba0")]
 [assembly: System.Reflection.AssemblyProductAttribute("CleanTempAsync.Core")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CleanTempAsync.Core")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
