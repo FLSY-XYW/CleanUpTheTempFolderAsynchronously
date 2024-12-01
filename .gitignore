@@ -1,5 +1,0 @@
-# 忽略 AutoFixtureTesting.Shared 目录
-AutoFixtureTesting.Shared/
-
-# 忽略 CleanTempAsync.Core.UnitTests 目录
-CleanTempAsync.Core.UnitTests/
